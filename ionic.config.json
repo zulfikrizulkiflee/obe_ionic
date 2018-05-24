@@ -1,0 +1,8 @@
+{
+  "name": "obe_ionic",
+  "app_id": "e8dd220b",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
