@@ -1,18 +1,60 @@
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <ion-icon name="funnel"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
   </ion-navbar>
+  <ion-title>Home</ion-title>
+  <ion-segment [(ngModel)]="stats" color="primary">
+    <ion-segment-button value="today">
+      Today
+    </ion-segment-button>
+    <ion-segment-button value="week">
+      Week
+    </ion-segment-button>
+    <ion-segment-button value="month">
+      Month
+    </ion-segment-button>
+  </ion-segment>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content padding class="my-content">
+  <div [ngSwitch]="stats">
+    <ion-list *ngSwitchCase="'today'">
+      <ion-card>
+        <ion-card-content>
+          <ion-list>
+            <button detail-none (click)="expandItem(item)" ion-item *ngFor="let item of items">
+              <ion-grid>
+                <ion-row>
+                  <ion-col col-11>
+                    <h1>{{ item.name }}</h1>
+                    <p>{{ item.type }}</p>
+                  </ion-col>
+                  <ion-col col-1>
+                    <ion-icon name="{{ item.icon }}"></ion-icon>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+              <accordion [expanded]="item.expanded">
+                  Hello people
+              </accordion>
+            </button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <ion-list *ngSwitchCase="'week'">
+      <ion-item>
+        <h2>Week</h2>
+      </ion-item>
+    </ion-list>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-list *ngSwitchCase="'month'">
+      <ion-item>
+        <h2>Month</h2>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

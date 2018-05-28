@@ -14,3 +14,115 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+//
+//	ALL
+//
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+.my-content .scroll-content {
+	background: #F5F6F7;
+}
+
+.user-img {
+	border-radius: 12px;
+	width: 25vmin;
+	height: 25vmin;
+}
+
+.header::after {
+	background-image: none;
+}
+
+.title {
+	padding: 0 16px 12px;
+}
+
+.toolbar-title {
+	padding: 0;
+	font-size: 40px;
+}
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+//
+//	NAVBAR
+//
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+.toolbar-background {
+	background: transparent;
+}
+
+.bar-button-menutoggle {
+	margin: 0;
+	order: 4;
+	-webkit-order: 4;
+}
+
+ion-title {
+	padding: 0 10px 12px;
+}
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+//
+//	MENU
+//
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+ion-menu {
+	.user-img {
+		margin: 35px 0 0 35px;
+	}
+
+	.toolbar-background {
+		border: none;
+	}
+
+	ion-list  .item{
+		color: #FFFFFF;
+		background: #2A2E43;
+	}
+
+	.menu-inner {
+		width: 265px;
+
+		.content{
+			background: #2A2E43;
+			color: #FFFFFF;
+		}
+	}
+
+	.item ion-icon[item-start] + .item-inner {
+		margin-left: 12px;
+	}
+
+	.item-inner {
+		border: none !important;
+	}
+
+	.item {
+		background: transparent;
+		color: #FFFFFF;
+		padding-left: 35px;
+	}
+
+	.log-out {
+		position: absolute;
+		bottom: 0;
+		opacity: 0.5;
+	}
+}
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+//
+//	CARDS
+//
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+.card {
+	margin: 0 0 10px;
+	width: 100%;
+	border-radius: 12px;
+	box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.14), 1px 0px 1px 0px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
+}
