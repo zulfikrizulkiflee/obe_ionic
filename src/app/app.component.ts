@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Observable } from 'rxjs/Observable';
+import { HttpClient } from '@angular/common/http';
 
 import { HomePage } from '../pages/home/home';
 import { FeedPage } from '../pages/feed/feed';
@@ -16,10 +18,14 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
+  users: Observable<any>;
+
   pages: Array<{icon: string, title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public httpClient: HttpClient) {
     this.initializeApp();
+
+    this.users = this.httpClient.get('http://www.obe-apps.tk/obe_apiv2/GO_USER_PROFILE.php?action=login&user_callsign=obe1&user_password=123&platform=abc');
 
     // used for an example of ngFor and navigation
     this.pages = [
@@ -30,7 +36,6 @@ export class MyApp {
     ];
 
   }
-
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

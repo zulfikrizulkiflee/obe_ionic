@@ -1,10 +1,10 @@
 <ion-menu [content]="content">
   <ion-content>
-    <ion-row>
-      <img class="user-img" src="assets/imgs/logo.png">
+    <ion-row *ngFor="let u of (users | async)">
+      <img class="user-img" src="http://www.obe-apps.tk/obe_apiv2/upload/{{ u.user_img }}">
       <ion-item>
-        <ion-row>User name</ion-row>
-        <ion-row>User id</ion-row>
+        <ion-row>{{ u.user_name }}</ion-row>
+        <ion-row>@{{ u.user_callsign }}</ion-row>
       </ion-item>
     </ion-row>
     <ion-list>
