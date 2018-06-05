@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
+import { WelcomePage } from '../pages/welcome/welcome';
+import { SignupPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
 import { FeedPage } from '../pages/feed/feed';
 import { OrdersPage } from '../pages/orders/orders';
@@ -18,6 +20,8 @@ import { AccordionComponent } from '../components/accordion/accordion';
 @NgModule({
   declarations: [
     MyApp,
+    WelcomePage,
+    SignupPage,
     HomePage,
     FeedPage,
     OrdersPage,
@@ -33,6 +37,8 @@ import { AccordionComponent } from '../components/accordion/accordion';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    WelcomePage,
+    SignupPage,
     HomePage,
     FeedPage,
     OrdersPage,

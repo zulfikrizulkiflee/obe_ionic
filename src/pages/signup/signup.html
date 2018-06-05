@@ -1,0 +1,70 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div padding>
+  <ion-segment [(ngModel)]="action">
+    <ion-segment-button value="signin">
+      SIGN IN
+    </ion-segment-button>
+    <ion-segment-button value="signup">
+      SIGN UP
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="action">
+  <ion-list *ngSwitchCase="'signin'">
+    <ion-item>
+      <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+    <ion-grid>
+      <ion-row>
+        <button ion-button full class="btn-signin">SIGN IN</button>
+      </ion-row>
+
+      <ion-row>
+        <div ion-text class="btn-forgot" color="link">Forgot Password?</div>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'signup'">
+    <ion-item>
+      <ion-input type="text" placeholder="Name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="Confirm Password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Email"></ion-input>
+    </ion-item>
+
+    <ion-grid>
+      <ion-row>
+        <button ion-button full class="btn-signup" (click)="signupConfirm()">SIGN UP</button>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</div>

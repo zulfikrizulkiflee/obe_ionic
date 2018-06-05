@@ -1,0 +1,49 @@
+page-signup {
+	background: url('/assets/imgs/bg-circle.jpg') no-repeat center right;
+
+	.segment {
+		width: 80%;
+		margin: auto;
+
+		&-button {
+			color: #78849E !important;
+			border: none !important;
+		}
+
+		&-activated {
+			color: #FFFFFF !important;
+			border-radius: 12px !important;
+			background: #665EFF !important;
+		}
+	}
+
+	.item {
+		padding: 16px;
+		background: transparent;
+
+		&-inner {
+			background: #FFFFFF;
+			border-bottom: none !important;
+			border: 1px solid #999 !important;
+			border-radius: 12px;
+			box-shadow: none !important;
+
+		}
+
+		&-input {
+			border: none !important;
+			box-shadow: none !important;
+		}
+	}
+
+	.btn-signin {
+		margin-top: 20vh;
+	}
+
+	.btn-forgot {
+		position: absolute;
+		bottom: 5vh;
+		text-align: center;
+		width: 100%;
+	}
+}

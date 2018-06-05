@@ -7,6 +7,8 @@ import { HttpClient } from '@angular/common/http';
 import { Storage } from '@ionic/storage';
 import 'rxjs/add/operator/map';
 
+import { WelcomePage } from '../pages/welcome/welcome';
+import { SignupPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
 import { FeedPage } from '../pages/feed/feed';
 import { OrdersPage } from '../pages/orders/orders';
@@ -31,11 +33,11 @@ export class MyApp {
     this.users = this.httpClient.get('http://www.obe-apps.tk/obe_apiv2/GO_USER_PROFILE.php?action=login&user_callsign=obe1&user_password=123&platform=abc');
 
     this.users.subscribe(data => {
-      console.log('my data: ', data);
+      storage.set('name', data[0].user_name);
     })
 
     // set a key/value
-    storage.set('name', 'Max');
+    // storage.set('name', 'Max');
 
     // Or to get a key/value pair
     // storage.get('name').then((val) => {
@@ -48,6 +50,8 @@ export class MyApp {
       { icon: 'paper-plane', title: 'Feed', component: FeedPage },
       { icon: 'basket', title: 'Orders', component: OrdersPage },
       { icon: 'alert', title: 'Notifications', component: NotificationPage },
+      { icon: 'welcome', title: 'Welcome', component: WelcomePage },
+      { icon: 'signup', title: 'Signup', component: SignupPage },
     ];
 
   }

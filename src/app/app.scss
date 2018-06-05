@@ -126,3 +126,31 @@ ion-menu {
 	border-radius: 12px;
 	box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.14), 1px 0px 1px 0px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
 }
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+//
+//	BUTTONS
+//
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+.button {
+	border-radius: 12px;
+	font-size: 15px;
+	color: #FFFFFF;
+	padding: 25px 8px;
+	box-shadow: none;
+
+	&-full {
+		margin: 10px;
+	}
+}
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+//
+//	ALERTS
+//
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+.alert-head {
+	color: #FFFFFF;
+}
